@@ -1,0 +1,14 @@
+<!ELEMENT p (#PCDATA)>
+    <!ELEMENT BOOK                  (OPENER,SUBTITLE?,INTRODUCTION?,(SECTION | PART)+)>
+    <!ELEMENT OPENER                (TITLE_TEXT)*>
+    <!ELEMENT TITLE_TEXT            (#PCDATA)>
+    <!ELEMENT SUBTITLE              (#PCDATA)>
+    <!ELEMENT INTRODUCTTION         (HEADER, p+)+>
+    <!ELEMENT PART                  (HEADER, CHAPTER+)>
+    <!ELEMENT SECTION               (HEADER, p+)>
+    <!ELEMENT HEADER                (#PCDATA)>
+    <!ELEMENT CHAPTER               (CHAOTER_NUMBER, CHAPTER_TEXT)>
+    <!ELEMENT CHAPTER_NUMBER        (#PCDATA)>
+    <!ELEMENT CHAPTER_TEXT          (p)+>
+    <!ATTLIST PART ID CDATA #REQUIRED>
+    <!ENTITY GLAD "Glad u want to hear about me !">
